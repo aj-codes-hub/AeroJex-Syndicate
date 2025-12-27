@@ -1,0 +1,41 @@
+
+
+
+.rotate-Animation{
+    animation: rotateAnimation 80s linear infinite;
+}
+
+@keyframes rotateAnimation {
+    0%{
+      rotate: 0deg;
+    }
+    100%{
+      rotate: 360deg;
+    }
+}
+
+.rotate-Animation3{
+    animation: rotateAnimation3 2s ease-in;
+}
+
+@keyframes rotateAnimation3 {
+    0%{
+      rotate: 0deg;
+    }
+    100%{
+      rotate: 360deg;
+    }
+}
+
+.rotate-Animation2{
+    animation: rotateAnimation2 20s linear infinite;
+}
+
+@keyframes rotateAnimation2 {
+    0%{
+      rotate: 0deg;
+    }
+    100%{
+      rotate: 360deg;
+    }
+}

@@ -1,0 +1,11 @@
+.text-stroke-outside {
+  text-shadow: 
+    -1px -1px 0 #3AC3F9,
+     1px -1px 0 #3AC3F9,
+    -1px  1px 0 #3AC3F9,
+     1px  1px 0 #3AC3F9,
+     0px -1px 0 #3AC3F9,
+     0px  1px 0 #3AC3F9,
+    -1px  0px 0 #3AC3F9,
+     1px  0px 0 #3AC3F9;
+}
