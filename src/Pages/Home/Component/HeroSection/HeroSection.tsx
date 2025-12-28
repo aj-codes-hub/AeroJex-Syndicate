@@ -11,8 +11,8 @@ const HeroSection:React.FC = () => {
   return (
     <div id='home'>
        <Container>
-        <div className='flex justify-between items-center h-[650px] w-full max-w-[1920px] mx-auto'>
-          <div className='lg:w-[48%] w-[88%] h-[75%] mx-auto lg:mx-0 text-center lg:text-left'>
+        <div className='flex justify-between items-center h-[650px] w-full max-w-[1300px] mx-auto'>
+          <div className='lg:w-[48%] w-[88%] sm:h-[75%] h-[85%] mx-auto lg:mx-0 text-center lg:text-left'>
             <div>
               <h1 className='font-bold text-[#95F9FE] text-shadow-[#95F9FE] leading-16 
                                 text-[44px]

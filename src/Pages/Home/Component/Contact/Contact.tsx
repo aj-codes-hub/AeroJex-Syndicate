@@ -25,16 +25,16 @@ const Contact: React.FC = () => {
   ]
   
   return (
-    <div id='contact' className='w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 md:py-20'>
+    <div id='contact' className='w-full h-[600px] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-12 sm:py-16 md:py-20'>
       
       <div className='w-full max-w-7xl relative'>
         
         {/* Header */}
         <div className='text-[#3AC3F9] font-bold mb-8 sm:mb-10 md:mb-12 lg:mb-16'>
-          <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[45px] leading-tight'>
+          <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[35px] 2xl:text-[45px] leading-10'>
             Get<span className='text-[#3AF9EF]'> in </span>Touch
           </h1>
-          <p className='text-xs sm:text-sm md:text-base lg:text-sm xl:text-base text-[#3AF9EF] font-medium mt-1 mb-2'>
+          <p className='text-xs sm:text-sm md:text-base lg:text-sm xl:text-base text-[#3AF9EF] font-medium'>
             Share your Idea's here..
           </p>
           <div className='h-[2px] w-[20%] sm:w-[22%] lg:w-[23%] bg-gradient-to-l from-[#3AF9EF] to-[#3af9ef20]'/>
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
               </div>
               
               {/* Right Column - Selects & Textarea */}
-              <div className='w-full lg:w-1/2 flex flex-col gap-4 sm:gap-6 lg:gap-8'>
+              <div className='w-full lg:w-1/2 flex flex-col gap-4 sm:gap-6 lg:gap-4'>
                 <SelectInput 
                   options={serviceOptions}
                   placeholder="Service"
@@ -85,14 +85,14 @@ const Contact: React.FC = () => {
                 />
                 
                 {/* Buttons - Mobile: Stacked, Desktop: Side by side */}
-                <div className='flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 sm:mt-6'>
-                  <Botton 
-                    Title='Submit' 
-                    className='w-full sm:w-auto px-8 py-3'
-                  />
+                <div className='flex flex-col sm:flex-row gap-4 sm:gap-6'>
                   <Botton 
                     Title='Clear' 
-                    className='w-full sm:w-auto px-8 py-3 bg-transparent border-2 border-[#3AF9EF] text-[#3AF9EF] hover:bg-[#3AF9EF] hover:text-black'
+                    className='w-full sm:w-auto px-8 py-3 bg-transparent text-[#3AF9EF] hover:bg-[#3AF9EF]'
+                  />
+                   <Botton 
+                    Title='Submit' 
+                    className='w-full sm:w-auto px-8 py-3 border-[1.5px]'
                   />
                 </div>
               </div>
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
           
           {/* Robot Section - Hidden on screens smaller than lg */}
           <div className='hidden lg:block lg:w-[40%] relative'>
-            <div className='h-full w-full absolute -top-8 -right-8 xl:-right-12'>
+            <div className='h-[130%] w-[130%] absolute -top-16 -right-8 xl:-right-12'>
               <Spline 
                 scene="https://prod.spline.design/6DlxZ6E4BKk3LTCW/scene.splinecode"
                 className='w-full h-full'

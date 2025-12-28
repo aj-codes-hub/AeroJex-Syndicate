@@ -35,8 +35,8 @@ useEffect(() => {
         const width = window.innerWidth;
         
         // Different base positions for different screen sizes
-        if (width > 1920) {
-            const extraWidth = width - 1920;
+        if (width > 1300) {
+            const extraWidth = width - 1300;
             const extraRight = (extraWidth / 100) * 50;
             return 100 + extraRight;
         }

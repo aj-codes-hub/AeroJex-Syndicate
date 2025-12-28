@@ -63,19 +63,19 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <div id='about' className='w-full lg:h-[650px] max-w-[1920px] mx-auto min-h-screen lg:min-h-[110vh] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 lg:py-0'>
+    <div id='about' className='w-full h-[650px] max-w-[1920px] mx-auto  flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 lg:py-0'>
       
-      <div className='w-full max-w-7xl flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16'>
+      <div className='w-full max-w-7xl flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 px-4'>
         
         {/* Left Section */}
         <div className='w-full lg:w-[60%] flex flex-col justify-center'>
           
           {/* Header */}
           <div className='text-[#3AC3F9] font-bold'>
-            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[45px] leading-tight'>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[35px] 2xl:text-[45px] leading-10'>
               ABOUT<span className='text-[#3AF9EF]'> US</span>
             </h1>
-            <p className='text-xs sm:text-sm md:text-base lg:text-sm xl:text-base text-[#3AF9EF] font-medium'>
+            <p className='text-xs sm:text-sm md:text-base lg:text-sm xl:text-sm 2xl:text-base text-[#3AF9EF] font-medium'>
               This is all about is..
             </p>
             <div className='h-[2px] w-1/3 lg:w-[33%] bg-gradient-to-l from-[#3AF9EF] to-[#3af9ef20]'/>

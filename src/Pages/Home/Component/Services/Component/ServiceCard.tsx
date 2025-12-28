@@ -46,7 +46,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ Icon, Title, Details }) => {
         transition transform duration-300 hover:scale-[1.03] 
         py-4 sm:py-5 md:py-6 lg:py-2 hover:border-[#10b6e8]
         hover:shadow-[0_3px_6px_rgb(0,0,0,0.1),0_1px_6px_rgb(0,0,0,0.08)]
-        h-full min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px]
+        h-full min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[200px]
     '>
       
       {/* Icon with responsive sizing */}

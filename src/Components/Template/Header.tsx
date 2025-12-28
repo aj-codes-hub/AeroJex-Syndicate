@@ -11,7 +11,7 @@ const [IsShow , setIsShow] = useState(false);
 
 useEffect(()=>{
   const HandleScrolled = () =>{
-    setScrolledVal(window.scrollY > 10);
+    setScrolledVal(window.scrollY > 15);
   }
   window.addEventListener('scroll', HandleScrolled);
   return() => {
@@ -25,8 +25,11 @@ const handleIsShow = () =>{
 
 
   return (
-    <div className='w-full max-w-[1920px] mx-auto mt-5 xl:px-15 lg:px-15 md:px-3 px-2 py-1 sticky top-0 z-[200]'>
-    <div className={`flex justify-between px-5 ${Scrolledval? "backdrop-blur-sm bg-black/10" : ""}`}>
+    <div className={`w-full xl:px-15 lg:px-15 md:px-3 px-2 py-1 z-[200] 
+                     transform duration-300
+                     ${Scrolledval? "sticky top-0 backdrop-blur-sm bg-black/10" : "sticky top-5"}`}>
+
+    <div className={`flex justify-between px-5 max-w-[1300px] mx-auto`}>
      <img src="/Logo/Logo.png" 
           alt="logo"
           height={60}
@@ -40,12 +43,9 @@ const handleIsShow = () =>{
                className='text-[white] md:hidden block'>
                {IsShow ? <RxCross2 size={40}/> : <IoMenu size={40}/>} 
        </button>
-
-       <div className='w-[45%] md:hidden block absolute'>
-       <MobileMenu className={` ${IsShow ? "w-[70%] px-5 sm:px-8" : "w-[0%]" } `}/>
-       </div>
        
      </div>
+      <MobileMenu className={` ${IsShow ? "w-[70%] px-5 sm:px-8" : "w-[0%]"  }`}/>
     </div>
   )
 }
