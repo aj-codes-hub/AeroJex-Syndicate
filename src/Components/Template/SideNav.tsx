@@ -47,7 +47,7 @@ const SideNav = () => {
   },[]);
 
   return ( 
-    <nav className="h-[60vh] w-16 flex items-center justify-center fixed -right-1 top-[25%] overflow-hidde
+    <nav className="h-[60vh] w-16 flex items-center justify-center fixed md:-right-1 -right-4 top-[25%] overflow-hidde
                     scale-[.7] transition transform duration-300 z-[999]"
         style={{
             opacity:isScrolled

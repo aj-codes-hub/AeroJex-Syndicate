@@ -26,8 +26,10 @@ const handleIsShow = () =>{
 
   return (
     <div className={`w-full xl:px-15 lg:px-15 md:px-3 px-2 py-1 z-[200] 
-                     transform duration-300
-                     ${Scrolledval? "sticky top-0 backdrop-blur-sm bg-black/10" : "sticky top-5"}`}>
+                     transform duration-300 sticky
+                     ${Scrolledval? "top-0 pt-2" : "top-5"}
+                     ${IsShow ? "" : "backdrop-blur-2xl bg-black/10"  }
+                     `}>
 
     <div className={`flex justify-between px-5 max-w-[1300px] mx-auto`}>
      <img src="/Logo/Logo.png" 
@@ -45,7 +47,8 @@ const handleIsShow = () =>{
        </button>
        
      </div>
-      <MobileMenu className={` ${IsShow ? "w-[70%] px-5 sm:px-8" : "w-[0%]"  }`}/>
+      <MobileMenu className={`
+                             ${IsShow ? "w-[70%] px-5 sm:px-8 backdrop-blur-2xl bg-black/10" : "w-[0%]"  }`}/>
     </div>
   )
 }

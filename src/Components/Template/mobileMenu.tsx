@@ -10,7 +10,7 @@ interface MobileMenuProps {
 const MobileMenu:React.FC<MobileMenuProps> = ({className}) =>{
   
   return (
-     <div className={`backdrop-blur-2xl bg-black/10 h-screen overflow-hidden fixed top-0 left-0 pt-10 transform duration-300
+     <div className={`h-screen overflow-hidden fixed top-0 left-0 pt-10 transform transition-all duration-300
                     ${className}`}>
    
      <img src="Logo/FooterLogo.png" 
