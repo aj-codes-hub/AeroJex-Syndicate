@@ -9,9 +9,10 @@ import Earth from './Component/Earth'
 import Header from '../../Components/Template/Header'
 import SideNav from '../../Components/Template/SideNav'
 import SectionLocation from '../../Components/Layout/SectionLocation'
-import Marquee from './Component/Marquee'
+import Marquee from '../../Components/Template/Marquee'
 import Loading from '../../Components/Template/Loading'
 import Footer from '../../Components/Template/Footer'
+import HeaderSupport from '../../Components/Template/HeaderSupport'
 
 const Home:React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Home:React.FC = () => {
        <Loading />
        <SectionLocation />
        <Header />
+       <HeaderSupport />
        <SideNav />
 
        <div className='relative w-full max-w-[1920px] mx-auto'> 

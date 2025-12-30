@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
         
         {/* Header */}
         <div className='text-[#3AC3F9] font-bold mb-8 sm:mb-10 md:mb-12 lg:mb-16'>
-          <h1 className='text-[26px] sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[35px] 2xl:text-[45px] md:leading-10 leading-6'>
+          <h1 className='text-[26px] sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[35px] 2xl:text-[45px] md:leading-8 leading-6'>
             Get<span className='text-[#3AF9EF]'> in </span>Touch
           </h1>
           <p className='text-[10px] sm:text-sm md:text-base lg:text-sm xl:text-base text-[#3AF9EF] font-medium'>

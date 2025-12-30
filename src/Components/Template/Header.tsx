@@ -27,9 +27,7 @@ const handleIsShow = () =>{
   return (
     <div className={`w-full xl:px-15 lg:px-15 md:px-3 px-2 py-1 z-[200] 
                      transform duration-300 sticky
-                     ${Scrolledval? "top-0 pt-2" : "top-5"}
-                     ${IsShow ? "" : "backdrop-blur-2xl bg-black/10"  }
-                     `}>
+                     ${Scrolledval? "top-0 pt-2" : "top-5"}`}>
 
     <div className={`flex justify-between px-5 max-w-[1300px] mx-auto`}>
      <img src="/Logo/Logo.png" 

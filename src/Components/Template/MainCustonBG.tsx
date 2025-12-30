@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const MainCustonBG: React.FC = () => {
-  const [opacities, setOpacities] = useState<number[]>([1, 0, 0, 0, 0, 0]);
+  const [opacities, setOpacities] = useState<number[]>([1, 0, 0, 0, 0, 0, 0]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +14,9 @@ const MainCustonBG: React.FC = () => {
       
       const progress = (scrolled % sectionHeight) / sectionHeight;
       
-      const newOpacities = [0, 0, 0, 0, 0, 0];
+      const newOpacities = [0, 0, 0, 0, 0, 0, 0];
       
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 7; i++) {
         if (i === currentSection) {
           newOpacities[i] = 1 - progress;
         } else if (i === currentSection + 1) {
@@ -58,6 +58,10 @@ const MainCustonBG: React.FC = () => {
 
          <img src="/Images/BG2.jpg" className='absolute h-[100vh] w-full object-cover -z-[90]'
          style={{ opacity: opacities[5] }}
+       /> 
+        
+       <img src="/Images/BG2.jpg" className='absolute h-[100vh] w-full object-cover -z-[100]'
+         style={{ opacity: opacities[6] }}
        /> 
 
     </div>

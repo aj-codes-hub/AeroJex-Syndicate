@@ -72,8 +72,8 @@ const AboutSection: React.FC = () => {
           
           {/* Header */}
           <div className='text-[#3AC3F9] font-bold'>
-            <h1 className='text-[26px] sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[35px] 2xl:text-[45px] md:leading-10 leading-6'>
-              ABOUT<span className='text-[#3AF9EF]'> US</span>
+            <h1 className='text-[26px] sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[35px] 2xl:text-[45px] md:leading-8 leading-6'>
+              ABOUT<span className='text-[#3AF9EF]'>US</span>
             </h1>
             <p className='text-[10px] sm:text-sm md:text-base lg:text-sm xl:text-sm 2xl:text-base text-[#3AF9EF] font-medium'>
               This is all about is..

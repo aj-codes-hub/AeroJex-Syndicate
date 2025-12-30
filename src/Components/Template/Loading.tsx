@@ -5,7 +5,7 @@ const Loading:React.FC = () => {
     <div className='w-full h-screen fixed z-[9999] bg-white/14 backdrop-blur
                     top-0 left-0 flex loader-page overflow-hidden'>
         
-        <div className='h-[300px] w-[650px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 overflow-hidden'>
+        <div className='h-[300px] w-[650px] absolute top-1/2 left-[52%] -translate-y-1/2 -translate-x-1/2 overflow-hidden'>
         
         <img src="/Logo/A.png" 
              alt="logo" 
