@@ -37,7 +37,7 @@ const HeroSection:React.FC = () => {
               </p>
             </div>
 
-          <Button Title="Get in Touch"/>
+          <Button Title="Get in Touch"  targetId="contact"/>
 
           </div>
 
