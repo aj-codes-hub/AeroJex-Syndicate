@@ -36,31 +36,31 @@ const MainCustonBG: React.FC = () => {
 
   return (
     <div className='h-[500vh] w-full fixed top-0 left-0 -z-[10]'>
-       <img src="/Images/BG1.jpg" className='absolute h-[100vh] w-full object-cover -z-[40]'
+       <img src="/Images/BG1.png" className='absolute h-[100vh] w-full object-cover -z-[40]'
          style={{ opacity: opacities[0] }}
        /> 
        
-       <img src="/Images/BG2.jpg" className='absolute h-[100vh] w-full object-cover -z-[50]'
+       <img src="/Images/BG2.png" className='absolute h-[100vh] w-full object-cover -z-[50]'
          style={{ opacity: opacities[1] }}
        /> 
        
-       <img src="/Images/BG1.jpg" className='absolute h-[100vh] w-full object-cover -z-[60]'
+       <img src="/Images/BG1.png" className='absolute h-[100vh] w-full object-cover -z-[60]'
          style={{ opacity: opacities[2] }}
        /> 
        
-       <img src="/Images/BG3.jpg" className='absolute h-[100vh] w-full object-cover -z-[70]'
+       <img src="/Images/BG3.png" className='absolute h-[100vh] w-full object-cover -z-[70]'
          style={{ opacity: opacities[3] }}
        /> 
        
-       <img src="/Images/BG1.jpg" className='absolute h-[100vh] w-full object-cover -z-[80]'
+       <img src="/Images/BG1.png" className='absolute h-[100vh] w-full object-cover -z-[80]'
          style={{ opacity: opacities[4] }}
        /> 
 
-         <img src="/Images/BG2.jpg" className='absolute h-[100vh] w-full object-cover -z-[90]'
+         <img src="/Images/BG2.png" className='absolute h-[100vh] w-full object-cover -z-[90]'
          style={{ opacity: opacities[5] }}
        /> 
         
-       <img src="/Images/BG2.jpg" className='absolute h-[100vh] w-full object-cover -z-[100]'
+       <img src="/Images/BG2.png" className='absolute h-[100vh] w-full object-cover -z-[100]'
          style={{ opacity: opacities[6] }}
        /> 
 

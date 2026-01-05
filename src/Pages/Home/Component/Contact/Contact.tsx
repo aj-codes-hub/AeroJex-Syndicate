@@ -3,6 +3,9 @@ import Spline from '@splinetool/react-spline'
 import Botton from '../../../../Components/Layout/Botton'
 import Input from './Component/Input'
 import SelectInput from './Component/InputSelector'
+import SectionHeading from '../../../../Components/Layout/SectionHeading'
+import CustomStarsLogo from './Component/StarsLogo'
+import StarsLogo from './Component/StarsLogo'
 
 const Contact: React.FC = () => {
   
@@ -29,18 +32,16 @@ const Contact: React.FC = () => {
       
       <div className='w-full max-w-7xl relative'>
         
-        {/* Header */}
-        <div className='text-[#3AC3F9] font-bold mb-8 sm:mb-10 md:mb-12 lg:mb-16'>
-          <h1 className='text-[26px] sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[35px] 2xl:text-[45px] md:leading-8 leading-6'>
-            Get<span className='text-[#3AF9EF]'> in </span>Touch
-          </h1>
-          <p className='text-[10px] sm:text-sm md:text-base lg:text-sm xl:text-base text-[#3AF9EF] font-medium'>
-            Share your Idea's here..
-          </p>
-          <div className='h-[2px] w-[46%] sm:w-[22%] lg:w-[23%] bg-gradient-to-l from-[#3AF9EF] to-[#3af9ef20]'/>
-          <div className='h-[2px] w-[46%] sm:w-[22%] lg:w-[23%] bg-gradient-to-l from-[#3af9ef1d] to-[#3AF9EF] mt-[2px]'/>
-        </div>
-        
+
+        <SectionHeading
+          headingStart='Get '
+          headingMid='in '
+          headingend='Touch'
+          SubHeading="Share your Idea's here.."
+          UnderLineWidth='w-[46%] sm:w-[22%] lg:w-[23%]'
+          className='mb-8 sm:mb-10 md:mb-12 lg:mb-16'
+          />
+
         {/* Main Content Area */}
         <div className='relative flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16'>
           
@@ -101,13 +102,8 @@ const Contact: React.FC = () => {
           </div>
           
           {/* Robot Section - Hidden on screens smaller than lg */}
-          <div className='hidden lg:block lg:w-[40%] relative'>
-            <div className='h-[130%] w-[130%] absolute -top-16 -right-8 xl:-right-12'>
-              <Spline 
-                scene="https://prod.spline.design/6DlxZ6E4BKk3LTCW/scene.splinecode"
-                className='w-full h-full'
-              />
-            </div>
+          <div className='hidden lg:block lg:w-[40%]'>
+            <StarsLogo />
           </div>
           
         </div>

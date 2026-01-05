@@ -147,7 +147,7 @@ useEffect(() => {
     }, [windowWidth, getInitialRightPosition, getMaxPositionIncrease, getMaxRotationIncrease]);
 
     return (
-        <div className={`transform duration-300 ${EarthShow ? "opacity-100" : "opacity-0 scale-[0.1]"}`}>
+        <div className={`transition-all duration-1000'> ${EarthShow ? "opacity-100" : "opacity-0 scale-0"}`}>
             <div 
                 className='fixed top-28 lg:block hidden overflow-hidden
                     md:h-[400px] md:w-[550px]
@@ -165,11 +165,11 @@ useEffect(() => {
                     style={{ opacity: OnScroll4 }} 
                 />
                 <img 
-                    src="/Images/FullBlueRing.png" 
+                    src="/Images/FullBlueRing2.png" 
                     className='absolute z-[10] h-[90%] w-[100%] transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
                 />
                 <img 
-                    src="/Images/Earth.png" 
+                    src="/Images/Earth2.png" 
                     className='absolute z-[20] h-[100%] w-[90%] transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rotate-Animation'
                     style={{
                         rotate: `${-OnScroll2}deg`,
@@ -177,7 +177,7 @@ useEffect(() => {
                     }}       
                 />
                 <img 
-                    src="/Images/Cube.png" 
+                    src="/Images/Cube2.png" 
                     className='absolute z-[20] h-[120%] w-[120%] transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rotate-Animation2'
                     style={{
                         rotate: `${-OnScroll2}deg`,
@@ -190,7 +190,7 @@ useEffect(() => {
                     style={{ opacity: OnScroll4 }}
                 />
                 <img 
-                    src="/Images/HalfBlueRing.png" 
+                    src="/Images/HalfBlueRing2.png" 
                     className='absolute z-[30] h-[100%] w-[94%] left-[2.4%] top-[2.5%] rotate-[7.2deg]'
                 />
             </div>
