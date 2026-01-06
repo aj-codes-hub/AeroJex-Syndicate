@@ -227,7 +227,7 @@ const StarsLogo: React.FC = () => {
       {displayPositions.map((pos, index) => (
         <div 
           key={`main-${index}`}
-          className='h-[2px] w-[2px] bg-[aqua] rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-5000'
+          className='h-[2px] w-[2px] bg-[aqua] rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000'
           style={{
             bottom: pos.bottom,
             right: pos.right
