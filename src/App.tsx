@@ -3,7 +3,7 @@ import Home from './Pages/Home/Home';
 
 const App: React.FC = () => {
   useEffect(() => {
-    const SCROLL_SPEED = 0.3; // Fixed 30% speed
+    const SCROLL_SPEED = 0.1; // Fixed 30% speed
     
     const handleWheel = (e: WheelEvent) => {
       if (e.ctrlKey) return; // Allow zoom
