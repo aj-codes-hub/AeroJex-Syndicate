@@ -14,6 +14,7 @@ import Loading from '../../Components/Template/Loading'
 import Footer from '../../Components/Template/Footer'
 import HeaderSupport from '../../Components/Template/HeaderSupport'
 
+
 const Home:React.FC = () => {
   return (
     <div>
@@ -29,7 +30,6 @@ const Home:React.FC = () => {
           <Earth />
         <Technologies />
        </div>
-       
        <AboutSection />
        <Services /> 
        <Marquee />

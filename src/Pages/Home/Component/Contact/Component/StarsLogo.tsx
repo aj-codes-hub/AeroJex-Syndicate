@@ -302,54 +302,101 @@ const StarsLogo: React.FC = () => {
   };
 
 
-  return (
-    <div 
-      ref={sectionRef}
-      className='h-full w-full relative'>
-
-      <div className='h-30 w-30 absolute top-27 left-1/2 -translate-y-1/2
-                     -translate-x-1/2 cursor-grab z-[50]'
-           onMouseEnter={() => setIsHovering(true)}
-           onMouseLeave={() => setIsHovering(false)}>
-           
+ return (
+  <div 
+    ref={sectionRef}
+    className='h-full w-full relative'>
+    
+    {/* Main Circle with Blast Effect */}
+    <div className='relative'>
+      <div 
+        className='h-30 w-30 rounded-full absolute top-27 left-1/2 -translate-y-1/2
+                   -translate-x-1/2 cursor-grab z-[50] overflow-hidden
+                   transition-all duration-500'
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}>
+     
       </div>
+      
+      {/* Blast Effect Layers - Appear on hover */}
+      {isHovering && (
+        <>
 
-      {/* Main stars - different sizes */}
-      {displayPositions.map((pos, index) => {
-        const sizeClass = getSizeClass(pos.size);
-        
-        return (
           <div 
-            key={`main-${index}`}
-            className={`${sizeClass}  bg-[aqua] rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000`}
+            className='absolute top-27 left-1/2 -translate-y-1/2 -translate-x-1/2
+                       border-4 border-red-500/70 rounded-full
+                       animate-[shockwave_0.8s_ease-out_forwards]'
             style={{
-              bottom: pos.bottom,
-              right: pos.right,
-              opacity: pos.opacity || 0.7
+              width: '7.5rem',
+              height: '7.5rem'
             }}
           />
-        );
-      })}
-
-      {/* Extra stars - different sizes */}
-      {extraStars.map((star) => {
-        const sizeClass = getSizeClass(star.size);
-       
-        
-        return (
+          
+          {/* Particle Effects */}
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={`particle-${i}`}
+              className='absolute h-[4px] w-[4px] rounded-full'
+              style={{
+                top: '50%',
+                left: '50%',
+                animation: `particle 0.6s ease-out ${i * 0.1}s forwards`,
+                '--angle': `${(360 / 8) * i}deg`,
+                '--distance': '120px'
+              } as React.CSSProperties}
+            />
+          ))}
+          
+          {/* Glow Effect */}
           <div 
-            key={`extra-${star.id}`}
-            className={`${sizeClass}  bg-[aqua] rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000`}
+            className='absolute top-27 left-1/2 -translate-y-1/2 -translate-x-1/2
+                       rounded-full bg-gradient-to-r from-blue-500/20 to-blue-500/20 
+                       blur-xl animate-pulse'
             style={{
-              bottom: star.bottom,
-              right: star.right,
-              opacity: star.opacity
+              width: '8rem',
+              height: '8rem'
             }}
           />
-        );
-      })}
+        </>
+      )}
     </div>
-  );
+
+    {/* Main stars - different sizes */}
+    {displayPositions.map((pos, index) => {
+      const sizeClass = getSizeClass(pos.size);
+      
+      return (
+        <div 
+          key={`main-${index}`}
+          className={`${sizeClass} bg-[aqua] rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000`}
+          style={{
+            bottom: pos.bottom,
+            right: pos.right,
+            opacity: pos.opacity || 0.7
+          }}
+        />
+      );
+    })}
+
+    {/* Extra stars - different sizes */}
+    {extraStars.map((star) => {
+      const sizeClass = getSizeClass(star.size);
+      
+      return (
+        <div 
+          key={`extra-${star.id}`}
+          className={`${sizeClass} bg-[aqua] rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-3000`}
+          style={{
+            bottom: star.bottom,
+            right: star.right,
+            opacity: star.opacity
+          }}
+        />
+      );
+    })}
+    
+  </div>
+);
 };
 
 export default StarsLogo;

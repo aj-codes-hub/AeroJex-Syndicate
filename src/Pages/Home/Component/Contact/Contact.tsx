@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
           </div>
           
           {/* Robot Section - Hidden on screens smaller than lg */}
-          <div className='hidden lg:block lg:w-[40%]'>
+          <div className='hidden lg:block lg:w-[40%] '>
             <StarsLogo />
           </div>
           
