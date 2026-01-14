@@ -61,7 +61,7 @@ const Button: React.FC<ButtonProps> = ({
     // Common button classes
     const buttonClasses = `font-semibold py-2 px-10 border rounded-full text-[#95F9FE] 
                           transition duration-300 cursor-pointer border-[#95F9FE] mt-5 
-                          backdrop-blur-sm bg-white/10 hover:bg-transparent hover:scale-[1.02]
+                          backdrop-blur bg-white/10 hover:bg-transparent hover:scale-[1.02]
                           ${className || ''}`
 
     // Agar href hai to <a> tag use karo, warna <button>

@@ -11,6 +11,7 @@ const AboutSection: React.FC = () => {
   const Goal = <GoGoal className="text-aqua" />
 
   const [activeCard, setActiveCard] = useState<'experience' | 'skills' | 'goal'>('skills');
+  const [isMobile, setIsMobile] = useState(false);
   
   // Refs for elements
   const headingRef = useRef<HTMLDivElement>(null);
@@ -26,6 +27,23 @@ const AboutSection: React.FC = () => {
     cards: false,
     panel: false
   });
+
+  // Check screen size on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   // Intersection Observer setup
   useEffect(() => {
@@ -134,7 +152,6 @@ const AboutSection: React.FC = () => {
     }
 
     // Mobile screen par details panel ko scroll karo
-    const isMobile = window.innerWidth < 768;
     if (isMobile && detailsPanelRef.current) {
       setTimeout(() => {
         detailsPanelRef.current?.scrollIntoView({ 
@@ -149,7 +166,7 @@ const AboutSection: React.FC = () => {
     return cardDetails[activeCard];
   };
 
-  // Animation styles
+  // Animation styles - Different for mobile and desktop
   const headingStyle = {
     transform: isVisible.heading 
       ? 'translateY(0px)' 
@@ -174,16 +191,18 @@ const AboutSection: React.FC = () => {
     transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s'
   };
 
+  // Desktop: Right se entry, Mobile: Bottom se entry
   const panelStyle = {
     transform: isVisible.panel 
-      ? 'translateX(0px)' 
-      : 'translateX(100px)',
+      ? (isMobile ? 'translateY(0px)' : 'translateX(0px)')
+      : (isMobile ? 'translateY(100px)' : 'translateX(100px)'),
     opacity: isVisible.panel ? 1 : 0,
-    transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s'
+    transition: `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${isMobile ? '0.4s' : '0.6s'}`
   };
 
   return (
-    <div id='about' ref={sectionRef} className='w-full md:h-[650px] max-w-[1920px] mx-auto flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 lg:py-0 overflow-hidden'>
+    <div id='about' ref={sectionRef} className='w-full md:h-[650px] max-w-[1920px] mx-auto flex items-center justify-center px-4
+                                               sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 lg:py-0 overflow-hidden'>
       
       <div className='w-full max-w-7xl flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 px-4'>
         
